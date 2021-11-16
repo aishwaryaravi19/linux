@@ -71,7 +71,7 @@
 
 ![image](https://github.com/aishwaryaravi19/linux/blob/master/output/cmpe1.PNG)
 ![image](https://github.com/aishwaryaravi19/linux/blob/master/output/cmpe283.2.PNG)
-![image](https://i.postimg.cc/7CfVDbR5/cmpe283-3.png)
+![image](https://github.com/aishwaryaravi19/linux/blob/master/output/cmpe283.3.PNG)
 
 
 
