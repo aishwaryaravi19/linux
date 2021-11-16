@@ -1,4 +1,6 @@
-1.Download and install VMWare WorkStation 16
+#STEPS FOLLOWED TO COMPLETE THE ASSIGNMENT
+
+* Download and install VMWare WorkStation 16
 2.Download Ubuntu 20.04.3 disc image.
 3.Configure Ubuntu in VMware Workstation.
 4.Allocate the resources as follows -
