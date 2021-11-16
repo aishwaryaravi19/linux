@@ -1,6 +1,6 @@
 # WORK DISTRIBUTION 
 
-   # AISHWARYA RAVI #:
+   # AISHWARYA RAVI:
         # IMPLEMENTATION #
         
            * Configured a Linux machine in VMWare WorkStation.(Collaborated with each other)
@@ -14,7 +14,7 @@
         Resolved certificate and certificate related revocation errors faced during the execution of ** make -j <cpu num> ** command and fixed it by changing the values of following config keys (CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_REVOCATION_KEYS) to empty string and disabled the config key CONFIG_DEBUG_INFO BIT for debugging related issues.
         
        
-   # SHRUTHI SRINIVASAN #:
+   # SHRUTHI SRINIVASAN:
         # IMPLEMENTATION # 
         
            * Configured a Linux machine in VMWare WorkStation.(Collaborated with each other)
