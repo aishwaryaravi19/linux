@@ -1,3 +1,31 @@
+# WORK DISTRIBUTION #
+
+   # AISHWARYA RAVI #:
+        # IMPLEMENTATION #
+        
+           * Configured a Linux machine in VMWare WorkStation.(Collaborated with each other)
+           * Downloaded the Ubuntu disc image and installed in the VMWare WorkStation.(Collaborated with each other)
+           * Built the Linux kernel source code.(Collaborated with each other)
+           * Created a new kernel module with the assignment functionality.
+           * Verified the output in the system message log.(Collaborated with each other)
+
+   
+        # ISSUES RESOLVED #:
+        Resolved certificate and certificate related revocation errors faced during the execution of ** make -j <cpu num> ** command and fixed it by changing the values of following config keys (CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_REVOCATION_KEYS) to empty string and disabled the config key CONFIG_DEBUG_INFO BIT for debugging related issues.
+        
+       
+   # SHRUTHI SRINIVASAN #:
+        # IMPLEMENTATION # 
+        
+           * Configured a Linux machine in VMWare WorkStation.(Collaborated with each other)
+           * Downnladed the Ubuntu disc image and installed in the VMWare WorkStation.(Collaborated with each other)
+           * Built the Linux kernel source code.(Collaborated with each other)
+           * Loaded the new module
+           * Verified the output in the system message log.(Collaborated with each other)
+           
+        # ISSUES RESOLVED #
+         Resolved library related issues while executing make oldconfig command by installing packages for flex and bison.Also resolved issues while executing make prepare command.The execution was failing as libelf-dev and libncurses-dev were not configured in the ubuntu system.
+
 # STEPS FOLLOWED TO COMPLETE THE ASSIGNMENT #
 
 * Download and install VMWare WorkStation 16
@@ -33,8 +61,11 @@
      * Demsg
 
 
-Issues faced during the execution -
-Got an error while executing make oldconfig - Installed flex and bison libraries to resolve it
-Got an error while executing make prepare - Installed  libelf-dev  and libncurses-dev to resolve all the package related issues.
-Got an error while executing make -j <cpu num> - Changed the value of CONFIG_SYSTEM_TRUSTED_KEYS  and CONFIG_SYSTEM_REVOCATION_KEYS to null.
-Got an error while executing make -j <cpu num> -   Disabled  CONFIG_DEBUG_INFO BIT
+# Issues faced during the execution #
+    * Got an error while executing make oldconfig - Installed flex and bison libraries to resolve it
+    * Got an error while executing make prepare - Installed  libelf-dev  and libncurses-dev to resolve all the package related issues.
+    * Got an error while executing make -j <cpu num> - Changed the value of CONFIG_SYSTEM_TRUSTED_KEYS  and CONFIG_SYSTEM_REVOCATION_KEYS to empty string.
+    * Got an error while executing make -j <cpu num> -   Disabled  CONFIG_DEBUG_INFO BIT
+    
+# Output #
+    
