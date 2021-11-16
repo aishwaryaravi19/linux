@@ -69,7 +69,9 @@
     
 # Output #
 
-[url=https://postimg.cc/TKk9Znt8][img]https://i.postimg.cc/TKk9Znt8/cmpe1.png[/img][/url]
+[url][https://postimg.cc/TKk9Znt8][img]https://i.postimg.cc/TKk9Znt8/cmpe1.png[/img][/url]
 [url=https://postimg.cc/jWmhjtVZ][img]https://i.postimg.cc/jWmhjtVZ/cmpe283-2.png[/img][/url]
 [url=https://postimg.cc/7CfVDbR5][img]https://i.postimg.cc/7CfVDbR5/cmpe283-3.png[/img][/url]
+![image](https://i.postimg.cc/jWmhjtVZ/cmpe283-2.png)
+
     
