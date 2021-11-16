@@ -71,7 +71,7 @@
 
 ![image](https://i.postimg.cc/TKk9Znt8/cmpe1.png)
 ![image](https://i.postimg.cc/jWmhjtVZ/cmpe283-2.png)
-![image](https://i.postimg.cc/7CfVDbR5/cmpe283-3.png)
+![image](https://i.postimg.cc/7CfVDbR5/cmpe283-3.png =250*250)
 
 
     
