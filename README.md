@@ -89,7 +89,7 @@
  * For CPUID leaf node %eax= 0x4FFFFFFD:
      * Return the number of exits for the exit number provided (on input) in %ecx. The output should be returned in %eax.
   
- # WORKING CODE TO TEST THE FUNCATIONALITY
+ # WORKING CODE TO TEST THE FUNCTIONALITY
  
  # STEP 2
    Build the code
