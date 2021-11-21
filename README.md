@@ -73,6 +73,61 @@
 ![image](https://github.com/aishwaryaravi19/linux/blob/master/output/cmpe283.2.PNG)
 ![image](https://github.com/aishwaryaravi19/linux/blob/master/output/cmpe283.3.PNG)
 
+# ASSIGNEMENT 2
+
+# PRE REQUISITES
+ Assignment 1 configuration is to be set up.
+
+# STEPS FOLLOWED TO COMPLETE THE ASSIGNMENT
+
+# STEP 1
+ * Add code to KVM at file /linux/arch/x86/kvm/vmx/vmx.c and
+   /linux/arch/x86/kvm/cpuid.c
+   
+ * For CPUID leaf node %eax= 0x4FFFFFFF:
+     * Return the total number of exits (all types) in %eax.
+ * For CPUID leaf node %eax= 0x4FFFFFFD:
+     * Return the number of exits for the exit number provided (on input) in %ecx. The output should be returned in %eax.
+  
+ # WORKING CODE TO TEST THE FUNCATIONALITY
+ 
+ # STEP 2
+   Build the code
+     * make modules
+     * make modules_install
+     * make install
+     * Reboot
+     
+ # STEP 3
+     Open virt-manager and start virtual machine. Install CPUID package inside the inner vm.
+     - sudo apt-get install cupid
+     
+ # STEP 4
+  Execute the following code for case 1:
+    * cpuid -l 0x4FFFFFFF
+    
+    
+    * Execute dmesg command in the host system’s terminal
+    
+    
+    * Total Exit count after rebooting
+    
+    
+    * Total exits taken for VM reboot: 677887
+    
+   # STEP 5
+  Execute the following code for case 3:
+    * cpuid -l 0x4FFFFFFD s -12 (Exit 12)
+    
+    
+    * Execute dmesg command in the host system’s terminal to count the exits available
+    
+    
+    * Total Exit count after rebooting
+    
+    
+    * Total exits taken for VM reboot: 677887  
+
 
 
     
