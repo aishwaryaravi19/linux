@@ -93,12 +93,13 @@
  
  # STEP 2
    Build the code
-     * make modules
-     * make modules_install
-     * make install
+     * sudo make modules
+     * sudo make modules_install
+     * sudo make install
      * Reboot
      
  # STEP 3
+   * Install Virtual Manager by using the following command: sudo apt-get install virt-manager
      Open virt-manager and start virtual machine. Install CPUID package inside the inner vm.
      - sudo apt-get install cupid
      
