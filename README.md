@@ -100,7 +100,7 @@
      
  # STEP 3
    * Install Virtual Manager by using the following command: sudo apt-get install virt-manager
-     Open virt-manager and start virtual machine. Install CPUID package inside the inner vm.
+   * Open virt-manager and start virtual machine. Install CPUID package inside the inner vm.
      - sudo apt-get install cupid
      
  # STEP 4
