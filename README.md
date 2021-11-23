@@ -125,12 +125,13 @@
     
     
     * Execute dmesg command in the host system’s terminal
+    
      ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture2.png)
     
     
     
     * Total Exit count after rebooting
-     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture3.png)
+      ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture3.png)
      Total exits taken for VM reboot: 677887
     
    # STEP 5
@@ -150,12 +151,15 @@
 3. Comment of the frequency of exits
 
 Answer: Frequency of the exits depends on the system use.The number of exit increases as more priveleged operations are performed.
+![image]https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/q3.png
        
 4.Of the exit types defined in the SDM, which are the most frequent? Least?
 
+![image]https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/q4.png
+
 Answer:  Most frequent exit - MSR_WRITE(count -605825)
          Least frequent exit - DR_ACCESS(count-8)
-Most frequent exit is MSR_WRITE with count 605825
+
 
 
 
