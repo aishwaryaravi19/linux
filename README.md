@@ -81,7 +81,7 @@
 
    *	Created leaf node %eax= 0x4FFFFFFF for case I
    *	Changed cpuid.c and vmx.c to implement the functionality as mentioned in the assignment 2  
-   *	Installed cupid Pakage on inner VM
+   *	Installed cpuid Pakage on inner VM
    *	Tested and Verified results
    *	Worked on the documentation.(Colloborated with Shruthi Srinivasan)
 
