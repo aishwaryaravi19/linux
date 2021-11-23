@@ -94,6 +94,17 @@
  # Modified cpuid.c
  
  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.1.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.2.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.3.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.4.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.5.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.6.PNG)
+ 
+ # Modified vmx.c
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.7.PNG)
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.8.PNG)
+ 
+ 
  
  # STEP 2
    Build the code
