@@ -75,6 +75,25 @@
 
 # ASSIGNEMENT 2
 
+# WORK DISTRIBUTION
+
+# AISHWARYA RAVI
+
+   *	Created leaf node %eax= 0x4FFFFFFF for case I
+   *	Changed cpuid.c and vmx.c to implement the functionality as mentioned in the assignment 2  
+   *	Installed cupid Pakage on inner VM
+   *	Tested and Verified results
+   *	Worked on the documentation.(Colloborated with Shruthi Srinivasan)
+
+
+# SHRUTHI SRINIVASAN
+
+  *	Created leaf node %eax= 0x4FFFFFFD for case III
+  *	Changed cpuid.c and vmx.c to implement the functionality as mentioned in the assignment 2  
+  *	Tested and verified results
+  *   Worked on the documentation.(Collaborated with Aishwarya Ravi)
+
+
 # PRE REQUISITES
  Assignment 1 configuration is to be set up.
 
@@ -156,6 +175,7 @@
     
 
 # Questions
+
 3. Comment of the frequency of exits
    Answer: Frequency of the exits depends on the system use.The number of exit increases as more priveleged operations are performed.
       ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/q3.png)
@@ -166,7 +186,9 @@
 
 Answer:  Most frequent exit - MSR_WRITE(count -605825)
          Least frequent exit - DR_ACCESS(count-8)
+
 ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/q4.png)
+
 
 
 
