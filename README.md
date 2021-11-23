@@ -91,6 +91,10 @@
   
  # WORKING CODE TO TEST THE FUNCTIONALITY
  
+ # Modified cpuid.c
+ 
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.1.PNG)
+ 
  # STEP 2
    Build the code
      * sudo make modules
