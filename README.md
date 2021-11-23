@@ -121,15 +121,17 @@
  # STEP 4
   Execute the following code for case 1:
     * cpuid -l 0x4FFFFFFF
+     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture1.png)
     
     
     * Execute dmesg command in the host system’s terminal
+     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture2.png)
+    
     
     
     * Total Exit count after rebooting
-    
-    
-    * Total exits taken for VM reboot: 677887
+     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture3.png)
+     Total exits taken for VM reboot: 677887
     
    # STEP 5
   Execute the following code for case 3:
