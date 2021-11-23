@@ -129,6 +129,20 @@
     
     * Total exits taken for VM reboot: 677887  
 
+# Questions
+3. Comment of the frequency of exits
+
+Answer: Frequency of the exits depends on the system use.The number of exit increases as more priveleged operations are performed.
+       
+4.Of the exit types defined in the SDM, which are the most frequent? Least?
+
+Answer:  Most frequent exit - MSR_WRITE(count -605825)
+         Least frequent exit - DR_ACCESS(count-8)
+Most frequent exit is MSR_WRITE with count 605825
+
+
+
+
 
 
     
