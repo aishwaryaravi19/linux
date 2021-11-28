@@ -75,6 +75,25 @@
 
 # ASSIGNEMENT 2
 
+# WORK DISTRIBUTION
+
+# AISHWARYA RAVI
+
+   *	Created leaf node %eax= 0x4FFFFFFF for case I
+   *	Changed cpuid.c and vmx.c to implement the functionality as mentioned in the assignment 2  
+   *	Installed cpuid Pakage on inner VM
+   *	Tested and Verified results
+   *	Worked on the documentation.(Colloborated with Shruthi Srinivasan)
+
+
+# SHRUTHI SRINIVASAN
+
+  *	Created leaf node %eax= 0x4FFFFFFD for case III
+  *	Changed cpuid.c and vmx.c to implement the functionality as mentioned in the assignment 2  
+  *	Tested and verified results
+  *   Worked on the documentation.(Collaborated with Aishwarya Ravi)
+
+
 # PRE REQUISITES
  Assignment 1 configuration is to be set up.
 
@@ -91,6 +110,21 @@
   
  # WORKING CODE TO TEST THE FUNCTIONALITY
  
+ # Modified cpuid.c
+ 
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.1.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.2.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.3.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.4.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.5.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.6.PNG)
+ 
+ # Modified vmx.c
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.7.PNG)
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/CMPE283.8.PNG)
+ 
+ 
+ 
  # STEP 2
    Build the code
      * sudo make modules
@@ -106,28 +140,57 @@
  # STEP 4
   Execute the following code for case 1:
     * cpuid -l 0x4FFFFFFF
+     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture1.png)
     
     
     * Execute dmesg command in the host system’s terminal
     
+     ![image] (https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture2.png)
+    
+    
     
     * Total Exit count after rebooting
-    
-    
-    * Total exits taken for VM reboot: 677887
+      ![image] (https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/Picture3.png)
+     Total exits taken for VM reboot: 677887
     
    # STEP 5
   Execute the following code for case 3:
     * cpuid -l 0x4FFFFFFD s -12 (Exit 12)
+     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/ffffd-s1.png)
+    
+    
     
     
     * Execute dmesg command in the host system’s terminal to count the exits available
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/ffffd-s2.png)
     
     
-    * Total Exit count after rebooting
+    * Cpuid - I 0X4fffffffd -444 - output for invalid exit code 
+   ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/ffffd-s3.png)
     
     
-    * Total exits taken for VM reboot: 677887  
+    
+    * cpuid - I 0x4fffffffd s-3 - output for valid exit but not defined by KVM
+   ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/ffffd-s4.png)  
+    
+
+# Questions
+
+3. Comment of the frequency of exits
+   Answer: Frequency of the exits depends on the system use.The number of exit increases as more priveleged operations are performed.
+      ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/q3.png)
+       
+4.Of the exit types defined in the SDM, which are the most frequent? Least?
+
+Answer:  Most frequent exit - MSR_WRITE(count -605825)
+         Least frequent exit - DR_ACCESS(count-8)
+
+![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/q4.png)
+
+
+
+
+
 
 
 
