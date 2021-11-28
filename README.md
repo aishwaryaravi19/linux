@@ -188,6 +188,84 @@ Answer:  Most frequent exit - MSR_WRITE(count -605825)
 ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/q4.png)
 
 
+# ASSIGNMENT 3
+
+##  WORK DISTRIBUTION
+
+### AISHWARYA RAVI
+
+### SHRUTHI SRINIVASAN
+
+# PREREQUISITES
+
+Assignment 1 configurations needs to be set up.
+
+ # STEP 1:
+Modify vmx.c and cpuid.c as per as the requirement.
+
+ * For CPUID leaf node %eax= 0x4FFFFFFE:  
+    * Return the higher 32 bits of the total time taken to  process all exits in %ebx
+    * Return the lower 32 bits of the total time taken to process  all exits in %ecx
+    * The values returned by %ebx and %ecx is measured across all VCPUs in every processor cycle.
+  
+ *	For CPUID leaf node %eax= 0x4FFFFFFC:
+   * Return the time taken to process  the exit number provided (on input) in %ecx. 
+   * Return the higher 32 bits of the total time taken to process  all exits in %ebx
+   * Return the lower 32 bits of the total time taken to process  all exits in %ecx
+
+ ### Code modified in vmx.c
+ ### Code modified in cpuid.c
+ 
+  # STEP 2
+   Build the code
+     * sudo make modules
+     * sudo make modules_install
+     * sudo make install
+     * Reboot
+     
+   # STEP 3
+  
+   * Open virt-manager and start virtual machine. Install CPUID package inside the inner vm.
+     - sudo apt-get install cupid
+
+   # STEP4
+     
+      ### Case 2
+       *	cpuid -l 0x4FFFFFFE
+       
+       
+       *	Execute dmesg command in the host system’s terminal
+       
+       Total Exit count after rebooting 
+       
+       
+       Total exits taken for VM reboot: 1486132839
+       
+   # STEP 5
+     
+       ### Case 4
+ 
+         *	cpuid -l 0x4FFFFFFC s -32
+         
+         *	Execute dmesg command to view all the exits available count.
+         
+         * Cupid -l 0x4FFFFFFC s -444 to test the output for invalid exit code.
+         
+         * cupid -l 0x4FFFFFFC s -3 to test the output for valid exit but not implemented by KVM.
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
 
 
 
