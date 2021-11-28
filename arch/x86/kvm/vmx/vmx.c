@@ -5932,9 +5932,18 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	union vmx_exit_reason exit_reason = vmx->exit_reason;
 	u32 vectoring_info = vmx->idt_vectoring_info;
 	u16 exit_handler_index;
+	
+        //Implementation Start: CMPE283 Assignment 3
+	int return_exit_handler=0; 
+	uint64_t cpu_cycles_before_exit;
+	uint64_t cpu_cycles_after_exit;
+	uint64_t exit_countwise_time[69];
+	//Implementation End: CMPE283 Assignment 3
+	
 	//Implementation Start: CMPE283 Assignment 2
         total_exits++;
         //Implementation End: CMPE283 Assignment 2
+        
 
 	/*
 	 * Flush logged GPAs PML buffer, this will make dirty_bitmap more
@@ -6075,11 +6084,18 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 						kvm_vmx_max_exit_handlers);
 	//Implementation Start : CMPE283 Assignment 2
 	exit_freq[exit_handler_index]++;
+        
 	//Implementation End : CMPE283 Assignment 2
 	if (!kvm_vmx_exit_handlers[exit_handler_index])
 		goto unexpected_vmexit;
 
-	return kvm_vmx_exit_handlers[exit_handler_index](vcpu);
+	//Implementation Start : CMPE283 Assignment 3
+	cpu_cycles_before_exit = rdtsc();
+        return_exit_handler= kvm_vmx_exit_handlers[exit_handler_index](vcpu);
+        cpu_cycles_after_exit = rdtsc();
+        exit_countwise_time[exit_handler_index] =  cpu_cycles_after_exit - cpu_cycles_before_exit;
+        //Implementation End : CMPE283 Assignment 3
+        return return_exit_handler;
 	
 
 unexpected_vmexit:
@@ -6097,7 +6113,22 @@ unexpected_vmexit:
 
 static int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 {
-	int ret = __vmx_handle_exit(vcpu, exit_fastpath);
+	//Implementation Start : CMPE283 Assignment 3
+	uint64_t cpu_cycles_before_exit;
+	uint64_t cpu_cycles_after_exit;
+	uint64_t cpu_cycle_count;
+	uint64_t total_exit_time = 0;
+	int ret;
+	
+	cpu_cycles_before_exit = rdtsc();
+
+	ret = __vmx_handle_exit(vcpu, exit_fastpath);
+
+	cpu_cycles_after_exit = rdtsc();
+	cpu_cycle_count = cpu_cycles_before_exit - cpu_cycles_after_exit;
+	total_exit_time = total_exit_time + cpu_cycle_count;
+	//Implementation End : CMPE283 Assignment 3
+	ret = __vmx_handle_exit(vcpu, exit_fastpath);
 
 	/*
 	 * Exit to user space when bus lock detected to inform that there is
