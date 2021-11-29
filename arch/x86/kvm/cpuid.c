@@ -98,7 +98,7 @@ static char exit_name[69][100] = {
 	"TPAUSE_NA"
 };
 //End : CMPE283 Assignment 2
-
+    
 /*
  * Unlike "struct cpuinfo_x86.x86_capability", kvm_cpu_caps doesn't need to be
  * aligned to sizeof(unsigned long) because it's not accessed via bitops.
@@ -1311,12 +1311,14 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	//Declarations Start : CMPE 283 Assignment 2
        extern uint64_t total_exits;
        extern uint64_t exit_freq[69];
+       uint64_t total_cpu_exit_time;
+       uint64_t exit_cpu_countwise_time[69];
+
        int i;
        //Declarations End : CMPE283 Assignment 2
        
        //Declarations Start : CMPE 283 Assignment 3
-       extern uint64_t total_exit_time;
-       extern uint64_t exit_countwise_time[69];
+    
        uint64_t per_exit_time=0;
        //Declarations End : CMPE283 Assignment 3
        	
@@ -1367,13 +1369,15 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 //Implementation End : CMPE283 Assignment 2
 
 //Implementation Start: CMPE283 Assignment 3
+
+
 	else if(eax == 0x4FFFFFFE){
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);		
 		printk(KERN_INFO "-------------------------------------------------------------------------------------------");
-		printk(KERN_INFO "Total Exits Time(Cycle) :%llu\n",total_exit_time);
+		printk(KERN_INFO "Total Exits Time(Cycle) :%llu\n",total_cpu_exit_time);
 
-		ebx = (u32)(total_exit_time>>32); 
-		ecx = (u32)(total_exit_time & 0xFFFFFFFF);		
+		ebx = (u32)(total_cpu_exit_time>>32); 
+		ecx = (u32)(total_cpu_exit_time & 0xFFFFFFFF);		
 		printk(KERN_INFO "Total Exits Time(CPU Cycles) spent : Value of EBX :%u\n",ebx);
 		printk(KERN_INFO "Total Exits Time(CPU Cycles) spent : Value of ECX :%u\n",ecx);
 		printk(KERN_INFO "-------------------------------------------------------------------------------------------");
@@ -1382,19 +1386,19 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	else if(eax == 0x4FFFFFFC){
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);		
 		//total time spent - Exit countwise 
-		printk(KERN_INFO "\tExit_Name\t\t\t\t\tExit No\t\tExit_countwise_Time");
+		printk(KERN_INFO "\tExit_Name\t\t\t\t\tExit No\t\tExit_cpu_countwise_Time");
 		printk(KERN_INFO "-------------------------------------------------------------------------------------------");
 
 		for(i=0; i<69; i++){
 		     	if((strstr(exit_name[i], "INVALID_VALUE") == NULL) && (strstr(exit_name[i], "_NA") == NULL)){
-		     	printk(KERN_INFO "\t%u \t\t\t\t %-30s \t\t\t\t%llu\n", i, exit_name[i],exit_countwise_time[i]);
+		     	printk(KERN_INFO "\t%u \t\t\t\t %-30s \t\t\t\t%llu\n", i, exit_name[i],exit_cpu_countwise_time[i]);
 	        }
 	       }
 		 if((int) ecx > -1 && (int)ecx < 69 && (strstr(exit_name[ecx],"_NA")==NULL) && (strstr(exit_name[ecx],"INVALID_VALUE")==NULL)){
 			printk(KERN_INFO "Total Exits Time(CPU Cycles) spent : value of ecx :%u\n",ecx);
 			printk(KERN_INFO "Total Exits Time(CPU Cycles) spent : exit_name[ecx] :%s\n",exit_name[ecx]);
-			printk(KERN_INFO "Total Exits Time(CPU Cycles) spent : exit_countwise_time[ecx] :%llu\n",exit_countwise_time[ecx]);
-			per_exit_time=exit_countwise_time[ecx];
+			printk(KERN_INFO "Total Exits Time(CPU Cycles) spent : exit_cpu_countwise_time[ecx] :%llu\n",exit_cpu_countwise_time[ecx]);
+			per_exit_time=exit_cpu_countwise_time[ecx];
 
 			ebx = (u32)(per_exit_time>>32); 
 			ecx = (u32)(per_exit_time&0xFFFFFFFF);
@@ -1417,6 +1421,7 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	else{
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);
 	}
+
 //Implementation End: CMPE283 Assignment 3
 
 
