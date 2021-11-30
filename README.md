@@ -193,8 +193,16 @@ Answer:  Most frequent exit - MSR_WRITE(count -605825)
 ##  WORK DISTRIBUTION
 
 ### AISHWARYA RAVI
+  * Created leaf node %eax=0x4FFFFFFE - Case 2
+  * Modifed cpuid.c and vmx.c as per as required
+  * Tested and verified the results
+  * Documented the steps and results
 
 ### SHRUTHI SRINIVASAN
+  * Created leaf node %eax=0x4FFFFFFC - Case 4
+  * Modifed cpuid.c and vmx.c as per as required
+  * Tested and verified the results
+  * Documented the steps and results
 
 # PREREQUISITES
 
@@ -260,7 +268,20 @@ Modify vmx.c and cpuid.c as per as the requirement.
     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%206.png)      
          
          * cupid -l 0x4FFFFFFC s -3 to test the output for valid exit but not implemented by KVM.
-     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%207.png)
+   ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%207.png)
+   
+   
+   ## Question 3
+     * Comment of the frequency axis
+       Frequency of the time spent depends on the type of exit.The number of exits tends to increase if more proveleged operations are performed by the system
+       
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/assignment3Q1%20(1).png)
+       
+      * Which are the most frequent and less frequent exit types?
+        Most frquent - MSR_WRITE -Cycle count 4859559731
+        Less frequent - DR_ACCESS - Cycle count 7625
+   
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/assignment3q2.png)     
 
 
 
