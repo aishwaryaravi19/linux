@@ -232,28 +232,35 @@ Modify vmx.c and cpuid.c as per as the requirement.
      
       ### Case 2
        *	cpuid -l 0x4FFFFFFE
-       ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/ffffd-s4.png)  
+       
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%201.png)  
        
        
        *	Execute dmesg command in the host system’s terminal
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%202.png)      
        
        Total Exit count after rebooting 
+   ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE3.png) 
        
        
        Total exits taken for VM reboot: 1486132839
+  
        
    # STEP 5
      
        ### Case 4
  
          *	cpuid -l 0x4FFFFFFC s -32
+   ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%204.png)
          
          
          *	Execute dmesg command to view all the exits available count.
-         
+   ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%205.png)
          * Cupid -l 0x4FFFFFFC s -444 to test the output for invalid exit code.
+    ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%206.png)      
          
          * cupid -l 0x4FFFFFFC s -3 to test the output for valid exit but not implemented by KVM.
+     ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%207.png)
 
 
 
