@@ -232,7 +232,7 @@ Modify vmx.c and cpuid.c as per as the requirement.
      
       ### Case 2
        *	cpuid -l 0x4FFFFFFE
-       ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%201.png)  
+       ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment2/ffffd-s4.png)  
        
        
        *	Execute dmesg command in the host system’s terminal
