@@ -232,6 +232,7 @@ Modify vmx.c and cpuid.c as per as the requirement.
      
       ### Case 2
        *	cpuid -l 0x4FFFFFFE
+       ![image](https://github.com/aishwaryaravi19/linux/blob/master/output_assignment3/ASSIGNMENT%203%20IMAGE%201.png)  
        
        
        *	Execute dmesg command in the host system’s terminal
@@ -246,6 +247,7 @@ Modify vmx.c and cpuid.c as per as the requirement.
        ### Case 4
  
          *	cpuid -l 0x4FFFFFFC s -32
+         
          
          *	Execute dmesg command to view all the exits available count.
          
