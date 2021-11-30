@@ -221,8 +221,6 @@ Modify vmx.c and cpuid.c as per as the requirement.
    * Return the higher 32 bits of the total time taken to process  all exits in %ebx
    * Return the lower 32 bits of the total time taken to process  all exits in %ecx
 
- ### Code modified in vmx.c
- ### Code modified in cpuid.c
  
   # STEP 2
    Build the code
