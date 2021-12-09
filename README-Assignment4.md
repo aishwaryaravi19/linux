@@ -36,6 +36,8 @@ Assignment 3 configurations needs to be set up.
 
   * Execute dmesg for nested paging (i.e., with ept)
   
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/ASSIGNMENT4-IMAGE1.PNG)
+  
  # STEP 2: 	
 
  * Execute following commands to switch from nested paging to shadow paging:  
@@ -44,6 +46,8 @@ Assignment 3 configurations needs to be set up.
    *	Reboot
  
  * Execute dmesg for shadow paging (i.e., without ept)
+ 
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/ASSIGNMENT4-IMAGE2.PNG)
 
 3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
 
