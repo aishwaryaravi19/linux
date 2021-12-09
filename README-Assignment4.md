@@ -5,7 +5,7 @@
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member 
 implemented / researched.
 
-Solution:
+## Solution:
 
 ##  WORK DISTRIBUTION
 
@@ -23,22 +23,22 @@ Solution:
 
 ## Together we analyzed the output and answered the questions
   
-2. Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
+## 2. Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
 
-Solution: 
+## Solution: 
 
 # PREREQUISITES
 
 Assignment 3 configurations needs to be set up.
 
- # STEP 1:
+## STEP 1:
   * Open virt-manager and start virtual machine. Run case 3 from previous assignment (To print all exit type wise counts). 
 
   * Execute dmesg for nested paging (i.e., with ept)
   
   ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/cmpe283.4.1.png)
   
- # STEP 2: 	
+## STEP 2: 	
 
  * Execute following commands to switch from nested paging to shadow paging:  
 	
@@ -49,16 +49,16 @@ Assignment 3 configurations needs to be set up.
  
  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/cmpe283.4.2.png)
 
-3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
+## 3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
 
-Solution: 
+## Solution: 
 
 - In the case of shadow paging, we can observe from the output, maximum exit occurred of type “CR_ACCESS ".
 - Also, INVLPG exit is present in case of shadow paging. INVLPG exit is used by hypervisor to invalidate translation in the TLB.
 
-4. What changed between the two runs (ept vs non-ept)
+## 4. What changed between the two runs (ept vs non-ept)
 
-Solution:
+## Solution:
 
 Nested Paging (ept=1)             |  Shadow Paging (ept=0)
 ----------------------------------| ---------------------------------
