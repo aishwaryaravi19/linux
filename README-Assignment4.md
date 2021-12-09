@@ -2,8 +2,7 @@
 # ASSIGNMENT 4
 
 ## Questions
-1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member 
-implemented / researched.
+## 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member implemented / researched.
 
 ## Solution:
 
@@ -67,5 +66,6 @@ The VM exits for “EPT_MISCONFIG”  | Count of exits for reason “CR_ACCESS�
                                   
 * In case of shadow paging the count of exits for reason “CR_ACCESS” increased significantly as hypervisor takes exits on access of CR register
 
+![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/book2.xlsx)
 
 
