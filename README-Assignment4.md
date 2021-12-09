@@ -36,7 +36,7 @@ Assignment 3 configurations needs to be set up.
 
   * Execute dmesg for nested paging (i.e., with ept)
   
-  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/ASSIGNMENT4 - IMAGE1.PNG)
+  ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/ASSIGNMENT 4 - IMAGE 1.png)
   
  # STEP 2: 	
 
@@ -47,7 +47,7 @@ Assignment 3 configurations needs to be set up.
  
  * Execute dmesg for shadow paging (i.e., without ept)
  
- ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/ASSIGNMENT4 - IMAGE2.PNG)
+ ![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/ASSIGNMENT 4 - IMAGE 2.png)
 
 3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
 
