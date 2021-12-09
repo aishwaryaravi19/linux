@@ -66,6 +66,6 @@ The VM exits for “EPT_MISCONFIG”  | Count of exits for reason “CR_ACCESS�
                                   
 * In case of shadow paging the count of exits for reason “CR_ACCESS” increased significantly as hypervisor takes exits on access of CR register
 
-![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/book2.xlsx)
+![image](https://github.com/aishwaryaravi19/linux/blob/master/output-assignment4/Book2.xlsx)
 
 
