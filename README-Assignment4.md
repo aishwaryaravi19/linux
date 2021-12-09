@@ -31,6 +31,7 @@ Assignment 3 configurations needs to be set up.
 
 ## Questions
 2. What changed between the two runs (ept vs non-ept)
+3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
 
 Solution: 
    ## Nested Paging
